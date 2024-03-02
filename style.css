@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Staatliches&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1% 10%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(196deg, rgb(0, 0, 0) 0%, rgb(5, 11, 86) 31%, rgb(9, 9, 121) 44%, rgb(6, 71, 162) 68%, rgb(0, 212, 255) 100%);
+  color: white;
+}
+
+.no-space {
+  margin-top: -20%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4%;
+}
+nav img {
+  width: 40px;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 80%;
+  font-family: "Space Grotesk", sans-serif;
+  text-align: justify;
+}
+nav ul li a {
+  text-decoration: none;
+  cursor: pointer;
+  border-bottom: 2px solid rgba(255, 255, 255, 0);
+  text-align: center;
+  position: relative;
+  color: white;
+}
+nav ul li a::after {
+  content: "";
+  transform-origin: 0 0;
+  transform: scaleX(0);
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #ffffff;
+  opacity: 1;
+  transition: transform 0.3s;
+}
+nav ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+.homeText {
+  margin-top: 38%;
+}
+.homeText p {
+  font-family: "Staatliches", sans-serif;
+  color: #f7f7f2;
+  font-size: 70px;
+  animation: slide-in-top 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.white {
+  background-color: #ffffff;
+  color: #000000;
+  margin: 9% -12.4%;
+  padding: 10% 10%;
+}
+.white .droit {
+  font-family: "Space Grotesk", sans-serif;
+  text-align: justify;
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: -7%;
+  margin-left: -30px;
+}
+
+.aboutMe {
+  display: flex;
+}
+.aboutMe .left {
+  width: 50%;
+}
+.aboutMe .left .profilePicture {
+  width: 90px;
+  z-index: 1;
+}
+.aboutMe .left .salutPicture {
+  width: 45px;
+  z-index: 2;
+  margin-left: -40px;
+}
+.aboutMe .right {
+  width: 50%;
+  padding-left: 3%;
+}
+.aboutMe .right h2 {
+  font-size: 48px;
+  color: #121113;
+  font-family: "Staatliches", sans-serif;
+  font-weight: 100;
+}
+.aboutMe .right p {
+  color: #000000;
+  font-size: 20px;
+  font-family: "Space Grotesk", sans-serif;
+  text-align: justify;
+  margin-top: 4%;
+}
+
+.skills {
+  display: flex;
+  margin-top: 14%;
+}
+.skills .left {
+  width: 50%;
+  margin-top: 30px;
+}
+.skills .left h3 {
+  font-size: 22px;
+  font-family: "Staatliches", sans-serif;
+  color: #222725;
+  font-weight: 100;
+}
+.skills .left p {
+  margin-top: 6%;
+  padding-top: 20px;
+  color: #000000;
+  font-size: 20px;
+  font-family: "Space Grotesk", sans-serif;
+  text-align: justify;
+  width: 90%;
+}
+.skills .right {
+  width: 50%;
+  padding-left: 3%;
+}
+.skills .right h3 {
+  font-size: 22px;
+  font-family: "Staatliches", sans-serif;
+  color: #222725;
+  font-weight: 100;
+}
+.skills .right .tab {
+  margin-top: 6%;
+}
+.skills .right .tab .box {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #d9d9d9;
+  padding: 20px 0px;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+}
+.skills .right .tab .box p {
+  font-family: "Space Grotesk", sans-serif;
+  text-align: justify;
+  font-weight: bold;
+  font-size: 26px;
+}
+.skills .right .tab .box.active {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.projects {
+  margin-top: 14%;
+}
+.projects h1 {
+  font-size: 48px;
+  font-weight: 100;
+  font-family: "Staatliches", sans-serif;
+  color: #222725;
+}
+.projects .cards {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+.projects .cards .card {
+  width: 450px;
+  height: 20.5%;
+  padding: 10px;
+  border: 2px solid #000000;
+  justify-content: center;
+  margin: 4% auto;
+  z-index: 9;
+}
+.projects .cards .card .languages {
+  gap: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  justify-content: center;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  margin: 4px;
+  border-radius: 20px;
+  width: 42px;
+  display: none;
+  height: auto;
+  position: absolute;
+  animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.projects .cards .card .languages img {
+  width: 25px;
+  height: 25px;
+  border: none;
+}
+.projects .cards .card img {
+  width: 100%;
+  height: 200px;
+  border: 1px solid #000000;
+  z-index: 0;
+}
+.projects .cards .card h3 {
+  font-size: 22px;
+  font-family: "Staatliches", sans-serif;
+  color: #222725;
+  font-weight: 100;
+  margin-top: 15px;
+}
+.projects .cards .card p {
+  margin-top: 6%;
+  color: #000000;
+  font-size: 19px;
+  font-family: "Space Grotesk", sans-serif;
+  text-align: justify;
+  margin-top: 3px;
+}
+.projects .cards .card button {
+  all: unset;
+  width: 160px;
+  padding: 10px 0;
+  border: 2px solid #000000;
+  margin-top: 50px;
+  justify-content: center;
+  margin-left: 50%;
+  transform: translate(-50%);
+  font-family: "Space Grotesk", sans-serif;
+  text-align: justify;
+  text-align: center;
+}
+.projects .cards .card button:hover {
+  box-shadow: 5px 5px 0px 1px #000000;
+  transition: 180ms;
+}
+.projects .cards .card:hover .languages {
+  display: grid;
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(-25px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+}
+.contact {
+  margin: 70px auto 0;
+  display: block;
+}
+.contact h2 {
+  font-size: 48px;
+  font-weight: 100;
+  font-family: "Staatliches", sans-serif;
+  color: #222725;
+  text-align: center;
+  margin: 50px auto;
+}
+.contact div {
+  width: 300px;
+  margin: 0 auto 100px;
+}
+.contact div a {
+  text-decoration: none;
+  border: 2px solid black;
+  padding: 30px 60px;
+  color: #000000;
+  font-family: "Space Grotesk", sans-serif;
+  text-align: justify;
+  font-size: 24px;
+}
+.contact div a:hover {
+  box-shadow: 5px 5px 0px 1px #000000;
+  transition: 180ms;
+}
+
+@media (max-width: 800px) {
+  .aboutMe {
+    display: grid;
+  }
+  .aboutMe .right {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .skills {
+    display: grid;
+  }
+  .skills .left {
+    width: 100%;
+    margin-left: 23px;
+  }
+  .skills .right {
+    width: 100%;
+    margin-top: 60px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
