@@ -340,6 +340,7 @@ nav ul li a:hover::after {
 .contact {
   margin: 70px auto 0;
   display: block;
+  text-align: center;
 }
 .contact h2 {
   font-size: 48px;
@@ -349,14 +350,15 @@ nav ul li a:hover::after {
   text-align: center;
   margin: 50px auto;
 }
-.contact .center {
-  margin-left: 40px;
+.contact .droit {
+  margin-left: 10px;
+  margin-top: 100px;
 }
-.contact .center div {
+.contact div {
   width: 300px;
-  margin: 0 auto 100px;
+  display: inline-block;
 }
-.contact .center div a {
+.contact div a {
   text-decoration: none;
   border: 2px solid black;
   padding: 30px 60px;
@@ -365,7 +367,7 @@ nav ul li a:hover::after {
   text-align: justify;
   font-size: 24px;
 }
-.contact .center div a:hover {
+.contact div a:hover {
   box-shadow: 5px 5px 0px 1px #000000;
   transition: 180ms;
 }
