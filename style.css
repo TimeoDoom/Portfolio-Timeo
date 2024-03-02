@@ -80,7 +80,7 @@ nav ul li a:hover::after {
   nav ul {
     position: fixed;
     left: -100%;
-    top: 10%;
+    top: 5%;
     flex-direction: column;
     width: 100%;
     text-align: center;
@@ -127,8 +127,11 @@ nav ul li a:hover::after {
     opacity: 1;
   }
 }
-@media (max-width: 500px) {
-  p {
+@media (max-width: 650px) {
+  .homeText {
+    margin-top: 38%;
+  }
+  .homeText p {
     font-family: "Staatliches", sans-serif;
     color: #f7f7f2;
     font-size: 50px;
@@ -186,6 +189,7 @@ nav ul li a:hover::after {
 .skills {
   display: flex;
   margin-top: 14%;
+  color: black;
 }
 .skills .left {
   width: 50%;
