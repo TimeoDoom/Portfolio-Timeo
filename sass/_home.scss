@@ -1,0 +1,63 @@
+// Home Text
+.homeText {
+  margin-top: 38%;
+  z-index: 1;
+
+  p {
+    @include textStaatliches;
+    color: $primary-color;
+    font-size: 60px;
+    animation: slide-in-top 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+}
+
+@-webkit-keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 650px) {
+  .homeText {
+    margin-top: 38%;
+
+    p {
+      @include textStaatliches;
+      color: $primary-color;
+      font-size: 50px;
+      animation: slide-in-top 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .homeText {
+    margin-top: 38%;
+
+    p {
+      @include textStaatliches;
+      color: $primary-color;
+      font-size: 40px;
+      animation: slide-in-top 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    }
+  }
+}

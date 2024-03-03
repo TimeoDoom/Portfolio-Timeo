@@ -1,0 +1,106 @@
+// Projects Section
+.projects {
+  margin-top: $margin-top-section;
+
+  h1 {
+    font-size: 48px;
+    font-weight: 100;
+    @include textStaatliches;
+    color: $tertiary-color;
+  }
+
+  .cards {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    z-index: 0;
+
+    .card {
+      width: 450px;
+      height: 20.5%;
+      padding: 10px;
+      border: 2px solid $quaternary-color;
+      justify-content: center;
+      margin: 4% auto;
+      z-index: 9;
+
+      .languages {
+        gap: 10px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        justify-content: center;
+        background-color: #ffffff;
+        border: 1px solid $quaternary-color;
+        margin: 4px;
+        border-radius: 20px;
+        width: 42px;
+        display: none;
+        height: auto;
+        position: absolute;
+        animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
+        img {
+          width: 25px;
+          height: 25px;
+          border: none;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 200px;
+        border: 1px solid $quaternary-color;
+        z-index: 0;
+      }
+
+      h3 {
+        font-size: 22px;
+        @include textStaatliches;
+        color: $tertiary-color;
+        font-weight: 100;
+        margin-top: 15px;
+      }
+
+      p {
+        margin-top: 6%;
+        color: $quaternary-color;
+        font-size: 19px;
+        @include textSpaceGrotesk;
+        margin-top: 3px;
+      }
+
+      button {
+        all: unset;
+        width: 160px;
+        padding: 10px 0;
+        border: 2px solid $quaternary-color;
+        margin-top: 50px;
+        justify-content: center;
+        margin-left: 50%;
+        transform: translate(-50%);
+        @include textSpaceGrotesk;
+        text-align: center;
+      }
+
+      button:hover {
+        box-shadow: 5px 5px 0px 1px $quaternary-color;
+        transition: 180ms;
+      }
+    }
+
+    .card:hover {
+      .languages {
+        display: grid;
+      }
+    }
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(-25px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+}

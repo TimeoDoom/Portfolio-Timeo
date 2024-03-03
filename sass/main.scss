@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Staatliches&display=swap");
+
+@import "variable";
+
+// Mixins
+@mixin flexSpace {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin textStaatliches {
+  font-family: "Staatliches", sans-serif;
+}
+
+@mixin textSpaceGrotesk {
+  font-family: "Space Grotesk", sans-serif;
+  text-align: justify;
+}
+
+// Reset scss
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1% 10%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    196deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(5, 11, 86, 1) 31%,
+    rgba(9, 9, 121, 1) 44%,
+    rgba(6, 71, 162, 1) 68%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  color: $text-color;
+}
+
+.no-space {
+  margin-top: -20%;
+}
+
+// Import pages
+@import "navBar";
+@import "home";
+@import "whiteSection";
+@import "aboutMe";
+@import "skills";
+@import "projects";
+@import "contact";
+
+@media (max-width: 800px) {
+  .aboutMe {
+    display: grid;
+    .right {
+      width: 100%;
+      margin-top: 50px;
+    }
+  }
+  .skills {
+    display: grid;
+
+    .left {
+      width: 100%;
+      margin-left: 23px;
+    }
+    .right {
+      width: 100%;
+      margin-top: 60px;
+    }
+  }
+}
