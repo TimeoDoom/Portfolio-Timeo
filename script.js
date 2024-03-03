@@ -20,10 +20,24 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
 const links = document.querySelectorAll("nav li");
+const check = document.getElementById("check");
+const menu = document.getElementById("menu");
+const closeIcone = document.getElementById("close");
 
-icons.addEventListener("click", () => {
+check.addEventListener("change", function () {
+  if (this.checked) {
+    console.log("La checkbox est cochée.");
+    menu.style.display = "none";
+    closeIcone.style.display = "block";
+  } else {
+    console.log("La checkbox est décochée.");
+    menu.style.display = "block";
+    closeIcone.style.display = "none";
+  }
+});
+
+check.addEventListener("click", () => {
   nav.classList.toggle("active");
 });
 
