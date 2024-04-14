@@ -6,14 +6,14 @@
 }
 
 body {
-  margin: 1% 10%;
-  background: rgb(0, 0, 0);
-  background: linear-gradient(196deg, rgb(0, 0, 0) 0%, rgb(5, 11, 86) 31%, rgb(9, 9, 121) 44%, rgb(6, 71, 162) 68%, rgb(0, 212, 255) 100%);
   color: white;
 }
 
-.no-space {
-  margin-top: -20%;
+.background {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(212deg, rgb(2, 0, 36) 7%, rgb(5, 3, 68) 36%, rgb(7, 6, 91) 73%, rgb(9, 9, 121) 100%, rgb(4, 124, 197) 100%, rgb(0, 212, 255) 100%);
+  height: 100vh;
+  padding: 2% 8%;
 }
 
 nav {
@@ -65,12 +65,12 @@ nav ul li a:hover::after {
   font-size: 35px;
 }
 
-@media (min-width: 650px) {
+@media (min-width: 750px) {
   .menu-hamburger {
     display: none;
   }
 }
-@media (max-width: 650px) {
+@media (max-width: 750px) {
   #icons {
     display: block;
   }
@@ -176,8 +176,7 @@ nav ul li a:hover::after {
 .white {
   background-color: #ffffff;
   color: #000000;
-  margin: 9% -12.4%;
-  padding: 10% 10%;
+  margin: 8%;
 }
 .white .droit {
   font-family: "Space Grotesk", sans-serif;
@@ -185,7 +184,6 @@ nav ul li a:hover::after {
   text-align: center;
   margin-top: 10%;
   margin-bottom: -7%;
-  margin-left: -30px;
 }
 
 .aboutMe {
@@ -373,7 +371,7 @@ nav ul li a:hover::after {
   }
 }
 .contact {
-  margin: 70px auto 0;
+  margin: 14% auto 0;
   display: block;
   text-align: center;
 }
@@ -407,6 +405,51 @@ nav ul li a:hover::after {
   transition: 180ms;
 }
 
+.lepine {
+  margin-top: 14%;
+}
+.lepine .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.lepine .content img {
+  width: 300px;
+  height: 300px;
+}
+.lepine .content .lepineText {
+  color: #000000;
+  font-size: 20px;
+  font-family: "Space Grotesk", sans-serif;
+  text-align: justify;
+  margin-top: 4%;
+  width: 45%;
+}
+.lepine .content .lepineText .linkToFacebook {
+  text-decoration: none;
+  color: #000000;
+  color: #0f0fac;
+  font-weight: 500;
+}
+
+@media (max-width: 660px) {
+  .lepine {
+    margin-top: 14%;
+  }
+  .lepine .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .lepine .content img {
+    width: 300px;
+    height: 300px;
+    margin-top: 50px;
+  }
+  .lepine .content .lepineText {
+    width: 100%;
+  }
+}
 @media (max-width: 800px) {
   .aboutMe {
     display: grid;
