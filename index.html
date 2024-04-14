@@ -5,35 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="./assets/favicone.png" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
     <title>Timéo Doom | Portfolio</title>
   </head>
-  <body>
-
-    <nav id="nav">
-      <img src="./assets/favicone.png" alt="" />
+  <html>
+    <section class="background">
+      <nav id="nav">
+        <img src="./assets/favicone.png" alt="" />
         <ul>
           <li><a href="#firstPoint">À propos de moi</a></li>
           <li><a href="#secondePoint">Compétences</a></li>
           <li><a href="#theerdPoint">Mes projets</a></li>
+          <li><a href="#fourthPoint">Lépine 2024</a></li>
         </ul>
 
         <div class="menu-hamburger">
-          <input id="check" type="checkbox">
+          <input id="check" type="checkbox" />
           <div class="icones">
             <i id="menu" class="material-icons">menu</i>
-            <i id="close" style="display: none;" class="material-icons">close</i>
+            <i id="close" style="display: none" class="material-icons">close</i>
           </div>
         </div>
-    </nav>
-  
-    <div class="homeText">
-      <p>
-        Je suis <span>Timéo,</span><br />
-        passionné de développement
-        web et mobile.
-      </p>
-    </div>
+      </nav>
+
+      <div class="homeText">
+        <p>
+          Je suis <span>Timéo,</span><br />
+          passionné de développement web et mobile.
+        </p>
+      </div>
+    </section>
 
     <section class="white">
       <div class="aboutMe">
@@ -83,67 +87,108 @@
               <p>JS</p>
               <p>2023</p>
             </div>
-            <div class="box" style="border: none">
+            <div class="box">
               <p>Python</p>
               <p>2023</p>
             </div>
             <div class="box" style="border: none">
-              <p>swiftUI</p>
+              <p>SwiftUI</p>
               <p>2024</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="projects">
+      <section class="projects">
         <a name="theerdPoint"></a>
         <h1>DEUX DE MES PROJETS</h1>
 
         <div class="cards">
-
           <div class="card">
             <div class="languages">
               <img src="./assets/htmlLogo.png" alt="html" />
               <img src="./assets/scssLogo.png" alt="scss" />
-              <img style="border: 1px solid black" src="./assets/jsLogo.png" alt="js" />
+              <img
+                style="border: 1px solid black"
+                src="./assets/jsLogo.png"
+                alt="js"
+              />
             </div>
             <img src="./assets/aimTraner.png" alt="Image du projet" />
             <h3>AIM trainer</h3>
             <p>
-              J'ai développé un entraîneur de visée amusant. Lorsqu'on clique sur une cible, si elle est piégée, une fenêtre pop-up s'affiche.
+              J'ai développé un entraîneur de visée amusant. Lorsqu'on clique
+              sur une cible, si elle est piégée, une fenêtre pop-up s'affiche.
             </p>
             <button>
-              <a style="text-decoration: none; color: black;" href="https://github.com/TimeoDoom?tab=repositories">Tu veux essayer ?</a>
+              <a
+                style="text-decoration: none; color: black"
+                href="https://github.com/TimeoDoom?tab=repositories"
+                >Tu veux essayer ?</a
+              >
             </button>
           </div>
 
           <div class="card">
             <div class="languages">
-              <img src="./assets/swiftLogo.png" alt="swiftUI" />
+              <img src="./assets/reactLogo.png" alt="reactNative" />
             </div>
-            <img class="img" src="./assets/projet2.png" alt="Image du projet" />
+            <img
+              class="img"
+              src="./assets/projet2.jpeg"
+              alt="Image du projet"
+            />
             <h3>Application Bougie Connectée</h3>
-            <p>Cette application permet grâce à un système électronique externe de contrôler une bougie à distance (allumage et extinction).</p>
+            <p>
+              Cette application permet grâce à un système électronique externe
+              de contrôler une bougie à distance (allumage et extinction).
+            </p>
             <button>
-              <a style="text-decoration: none; color: black;" href="https://github.com/TimeoDoom?tab=repositories">Accéder au projet</a>
+              <a
+                style="text-decoration: none; color: black"
+                href="https://github.com/TimeoDoom?tab=repositories"
+                >Accéder au projet</a
+              >
             </button>
           </div>
         </div>
-      <div class="contact">
-        <h2>Allez voir mon GitHub 😉</h2>
 
-        <div>
-          <a href="https://github.com/TimeoDoom?tab=repositories">
-            Mon GitHub
-          </a>
+        <div class="lepine">
+          <a name="fourthPoint"></a>
+          <h1>En route pour le concours Lépine 2024 !</h1>
+
+          <div class="content">
+            <p class="lepineText">
+              Au cours de mes années de première et terminale au lycée
+              Saint-Joseph Gabarret, j’ai eu l’opportunité de travailler sur un
+              objet innovant : un chandelier connecté. J’ai donc pu faire un
+              vrai travail de recherche et développement, ce qui m’a apporté de
+              précieuses compétences techniques mais également humaines avec un
+              travail poussé en équipe. L’aboutissement de ce projet m'a conduit
+              au concours Lépine 2024. Je vous invite à suivre cette aventure<a
+                target="_blank"
+                class="linkToFacebook"
+                href="https://www.facebook.com/share/p/1c4ksXnVRDzZFQUr/"
+              >
+                ici.</a
+              >
+            </p>
+            <img src="./assets/lepineLogo.png" alt="lepineLogo" />
+          </div>
         </div>
-        <p class="droit">Droit d’auteur 2024. Tous droits réservés.</p> 
-      </div>
 
+        <div class="contact">
+          <h2>Allez voir mon GitHub 😉</h2>
+
+          <div>
+            <a href="https://github.com/TimeoDoom?tab=repositories">
+              Mon GitHub
+            </a>
+          </div>
+          <p class="droit">Droit d’auteur 2024. Tous droits réservés.</p>
+        </div>
+      </section>
+      <script src="./script.js"></script>
     </section>
-
-    <div class="no-space"></div>
-
-    <script src="./script.js"></script>
-  </body>
+  </html>
 </html>
