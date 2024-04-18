@@ -1,0 +1,50 @@
+.lepine {
+  margin-top: $margin-top-section;
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    img {
+      width: 300px;
+      height: 300px;
+    }
+
+    .lepineText {
+      color: $quaternary-color;
+      font-size: 20px;
+      @include textSpaceGrotesk;
+      margin-top: 4%;
+      width: 45%;
+      .linkToFacebook {
+        text-decoration: none;
+        color: $quaternary-color;
+        color: #0f0fac;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .lepine {
+    margin-top: $margin-top-section;
+
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      img {
+        width: 300px;
+        height: 300px;
+        margin-top: 50px;
+      }
+
+      .lepineText {
+        width: 100%;
+      }
+    }
+  }
+}
