@@ -373,38 +373,59 @@ nav ul li a:hover::after {
 .contact {
   margin: 14% auto 0;
   display: block;
-  text-align: center;
 }
 .contact h2 {
   font-size: 48px;
   font-weight: 100;
   font-family: "Staatliches", sans-serif;
   color: #222725;
-  text-align: center;
   margin: 50px auto;
 }
-.contact .droit {
-  margin-left: 10px;
-  margin-top: 100px;
-}
-.contact div {
-  width: 300px;
-  display: inline-block;
-}
-.contact div a {
+.contact a {
   text-decoration: none;
-  border: 2px solid black;
-  padding: 30px 60px;
-  color: #000000;
+  color: black;
+}
+.contact a .links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #d9d9d9;
+  padding: 20px 0px;
+}
+.contact a .links .leftContact {
+  width: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contact a .links .leftContact p {
   font-family: "Space Grotesk", sans-serif;
   text-align: justify;
-  font-size: 24px;
+  font-weight: bold;
+  font-size: 26px;
 }
-.contact div a:hover {
-  box-shadow: 5px 5px 0px 1px #000000;
-  transition: 180ms;
+.contact a .links .leftContact img {
+  width: 32px;
+}
+.contact a .links .material-symbols-outlined {
+  font-size: 30px;
+  font-weight: bold;
+  opacity: 0;
+}
+.contact a .links:hover .material-symbols-outlined {
+  animation: fillAnimation 1s forwards;
 }
 
+@keyframes fillAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
 .lepine {
   margin-top: 14%;
 }
