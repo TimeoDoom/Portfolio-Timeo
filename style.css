@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Staatliches&display=swap");
 * {
   margin: 0;
@@ -10,8 +11,7 @@ body {
 }
 
 .background {
-  background: rgb(2, 0, 36);
-  background: linear-gradient(212deg, rgb(2, 0, 36) 7%, rgb(5, 3, 68) 36%, rgb(7, 6, 91) 73%, rgb(9, 9, 121) 100%, rgb(4, 124, 197) 100%, rgb(0, 212, 255) 100%);
+  background-image: radial-gradient(circle farthest-corner at -8.9% 51.2%, rgb(255, 124, 0) 0%, rgb(255, 124, 0) 15.9%, rgb(255, 163, 77) 15.9%, rgb(255, 163, 77) 24.4%, rgb(19, 30, 37) 24.5%, rgb(19, 30, 37) 66%);
   height: 100vh;
   padding: 2% 8%;
 }
@@ -116,8 +116,11 @@ nav ul li a:hover::after {
   }
 }
 .homeText {
-  margin-top: 38%;
-  z-index: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center; /* Centrage horizontal */
+  align-items: center; /* Centrage vertical */
+  height: 80vh; /* Hauteur de la fenêtre visible */
 }
 .homeText p {
   font-family: "Staatliches", sans-serif;
@@ -126,34 +129,7 @@ nav ul li a:hover::after {
   animation: slide-in-top 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-@-webkit-keyframes slide-in-top {
-  0% {
-    -webkit-transform: translateY(-1000px);
-    transform: translateY(-1000px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes slide-in-top {
-  0% {
-    -webkit-transform: translateY(-1000px);
-    transform: translateY(-1000px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 @media (max-width: 650px) {
-  .homeText {
-    margin-top: 38%;
-  }
   .homeText p {
     font-family: "Staatliches", sans-serif;
     color: #f7f7f2;
@@ -162,9 +138,6 @@ nav ul li a:hover::after {
   }
 }
 @media (max-width: 560px) {
-  .homeText {
-    margin-top: 38%;
-  }
   .homeText p {
     font-family: "Staatliches", sans-serif;
     color: #f7f7f2;
@@ -294,6 +267,7 @@ nav ul li a:hover::after {
   justify-content: center;
   margin: 4% auto;
   z-index: 9;
+  transition: 2s;
 }
 .projects .cards .card .languages {
   gap: 10px;
@@ -305,10 +279,10 @@ nav ul li a:hover::after {
   margin: 4px;
   border-radius: 20px;
   width: 42px;
-  display: none;
+  opacity: 0;
+  display: grid;
   height: auto;
   position: absolute;
-  animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 .projects .cards .card .languages img {
   width: 25px;
@@ -351,18 +325,21 @@ nav ul li a:hover::after {
   box-shadow: 5px 5px 0px 1px #000000;
   transition: 180ms;
 }
+.projects .cards .card button:not(:hover) {
+  box-shadow: 0px 0px 0px 0px #000000;
+  transition: 180ms;
+}
 .projects .cards .card:hover .languages {
-  display: grid;
+  opacity: 1;
+  transform: translateX(5px);
+  transition: 0.5s;
+}
+.projects .cards .card:not(:hover) .languages {
+  opacity: 0;
+  transform: translateX(-15px);
+  transition: 0.4s;
 }
 
-@keyframes slide-right {
-  0% {
-    transform: translateX(-25px);
-  }
-  50% {
-    transform: translateX(0px);
-  }
-}
 .contact {
   margin: 14% auto 0;
   display: block;
@@ -440,7 +417,7 @@ nav ul li a:hover::after {
 .lepine .content .lepineText .linkToFacebook {
   text-decoration: none;
   color: #000000;
-  color: #0f0fac;
+  color: #ff9500;
   font-weight: 500;
 }
 
