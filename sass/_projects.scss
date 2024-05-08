@@ -1,4 +1,3 @@
-// Projects Section
 .projects {
   margin-top: $margin-top-section;
 
@@ -23,6 +22,7 @@
       justify-content: center;
       margin: 4% auto;
       z-index: 9;
+      transition: 2s;
 
       .languages {
         gap: 10px;
@@ -34,10 +34,10 @@
         margin: 4px;
         border-radius: 20px;
         width: 42px;
-        display: none;
+        opacity: 0;
+        display: grid;
         height: auto;
         position: absolute;
-        animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
         img {
           width: 25px;
@@ -86,21 +86,27 @@
         box-shadow: 5px 5px 0px 1px $quaternary-color;
         transition: 180ms;
       }
+
+      button:not(:hover) {
+        box-shadow: 0px 0px 0px 0px $quaternary-color;
+        transition: 180ms;
+      }
     }
 
     .card:hover {
       .languages {
-        display: grid;
+        opacity: 1;
+        transform: translateX(5px);
+        transition: 0.5s;
       }
     }
-  }
-}
 
-@keyframes slide-right {
-  0% {
-    transform: translateX(-25px);
-  }
-  50% {
-    transform: translateX(0px);
+    .card:not(:hover) {
+      .languages {
+        opacity: 0;
+        transform: translateX(-15px);
+        transition: 0.4s;
+      }
+    }
   }
 }

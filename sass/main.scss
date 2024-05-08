@@ -14,7 +14,6 @@
 
 @mixin textSpaceGrotesk {
   font-family: "Space Grotesk", sans-serif;
-  text-align: justify;
 }
 
 // Reset scss
@@ -25,21 +24,21 @@
 }
 
 body {
-  margin: 1% 10%;
-  background: rgb(0, 0, 0);
-  background: linear-gradient(
-    196deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(5, 11, 86, 1) 31%,
-    rgba(9, 9, 121, 1) 44%,
-    rgba(6, 71, 162, 1) 68%,
-    rgba(0, 212, 255, 1) 100%
-  );
   color: $text-color;
 }
 
-.no-space {
-  margin-top: -20%;
+.background {
+  background-image: radial-gradient(
+    circle farthest-corner at -8.9% 51.2%,
+    rgba(255, 124, 0, 1) 0%,
+    rgba(255, 124, 0, 1) 15.9%,
+    rgba(255, 163, 77, 1) 15.9%,
+    rgba(255, 163, 77, 1) 24.4%,
+    rgba(19, 30, 37, 1) 24.5%,
+    rgba(19, 30, 37, 1) 66%
+  );
+  height: 100vh;
+  padding: 2% 8%;
 }
 
 // Import pages
@@ -50,6 +49,7 @@ body {
 @import "skills";
 @import "projects";
 @import "contact";
+@import "lepine";
 
 @media (max-width: 800px) {
   .aboutMe {
