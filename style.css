@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Staatliches&display=swap");
 * {
   margin: 0;
@@ -10,38 +9,37 @@ body {
   color: white;
 }
 
-.background {
-  background-image: radial-gradient(circle farthest-corner at -8.9% 51.2%, rgb(255, 124, 0) 0%, rgb(255, 124, 0) 15.9%, rgb(255, 163, 77) 15.9%, rgb(255, 163, 77) 24.4%, rgb(19, 30, 37) 24.5%, rgb(19, 30, 37) 66%);
+header {
+  width: 100%;
   height: 100vh;
-  padding: 2% 8%;
-}
-
-nav {
+  padding: 2% 6%;
+  background-color: #092337;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+}
+header nav {
   align-items: center;
-  padding: 10px;
-  font-size: 17px;
-}
-nav img {
-  width: 40px;
-}
-nav ul {
-  display: flex;
   justify-content: space-between;
-  list-style: none;
-  width: 80%;
-  font-family: "Space Grotesk", sans-serif;
+  display: flex;
 }
-nav ul li a {
+header nav .navBarFavicone {
+  width: 50px;
+}
+header nav .links {
+  width: 80%;
+  list-style: none;
+  justify-content: space-between;
+  display: flex;
+}
+header nav .links li a {
   text-decoration: none;
-  cursor: pointer;
-  border-bottom: 2px solid rgba(255, 255, 255, 0);
   text-align: center;
   position: relative;
   color: white;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 17px;
 }
-nav ul li a::after {
+header nav .links li a::after {
   content: "";
   transform-origin: 0 0;
   transform: scaleX(0);
@@ -50,18 +48,28 @@ nav ul li a::after {
   left: 0;
   right: 0;
   height: 2px;
-  background: #ffffff;
+  background: white;
   opacity: 1;
   transition: transform 0.3s;
 }
-nav ul li a:hover::after {
+header nav .links li a:hover::after {
   transform: scaleX(1);
+}
+header .homeText {
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+}
+header .homeText #typedtext {
+  font-family: "Staatliches", sans-serif;
+  font-size: 60px;
+  color: white;
+  margin-top: -40px;
 }
 
 #icons {
   cursor: pointer;
   display: none;
-  font-size: 35px;
 }
 
 @media (min-width: 750px) {
@@ -77,13 +85,15 @@ nav ul li a:hover::after {
     z-index: 2;
     position: fixed;
     flex-direction: column;
-    left: -100%;
-    top: 11.5%;
-    width: 90%;
-    margin-left: 5%;
+    width: 100%;
+    left: 100%;
+    top: 12%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
     transition: 0.25s;
     text-align: center;
-    background: rgba(255, 255, 255, 0.1607843137);
+    background: rgba(65, 65, 65, 0.3254901961);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1019607843);
     backdrop-filter: blur(5px);
@@ -115,117 +125,95 @@ nav ul li a:hover::after {
     position: absolute;
   }
 }
-.homeText {
-  text-align: center;
+.aboutMeSection {
   display: flex;
-  justify-content: center; /* Centrage horizontal */
-  align-items: center; /* Centrage vertical */
-  height: 80vh; /* Hauteur de la fenêtre visible */
+  padding: 180px 6% 50px 6%;
 }
-.homeText p {
-  font-family: "Staatliches", sans-serif;
-  color: #f7f7f2;
-  font-size: 60px;
-  animation: slide-in-top 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
-@media (max-width: 650px) {
-  .homeText p {
-    font-family: "Staatliches", sans-serif;
-    color: #f7f7f2;
-    font-size: 50px;
-    animation: slide-in-top 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  }
-}
-@media (max-width: 560px) {
-  .homeText p {
-    font-family: "Staatliches", sans-serif;
-    color: #f7f7f2;
-    font-size: 40px;
-    animation: slide-in-top 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  }
-}
-.white {
-  background-color: #ffffff;
-  color: #000000;
-  margin: 8%;
-}
-.white .droit {
-  font-family: "Space Grotesk", sans-serif;
-  text-align: center;
-  margin-top: 10%;
-  margin-bottom: -7%;
-}
-
-.aboutMe {
-  display: flex;
-}
-.aboutMe .left {
+.aboutMeSection .profilePictureAndHelloEmoticon {
   width: 50%;
 }
-.aboutMe .left .profilePicture {
-  width: 90px;
+.aboutMeSection .profilePictureAndHelloEmoticon .profilePicture {
+  width: 120px;
   z-index: 1;
 }
-.aboutMe .left .salutPicture {
-  width: 45px;
+.aboutMeSection .profilePictureAndHelloEmoticon .helloEmoticon {
+  width: 50px;
   z-index: 2;
-  margin-left: -40px;
+  margin-left: -45px;
+  animation: wobble-hor-bottom 1.5s both infinite;
 }
-.aboutMe .right {
+.aboutMeSection .helloText {
   width: 50%;
-  padding-left: 3%;
 }
-.aboutMe .right h2 {
-  font-size: 48px;
-  color: #121113;
+.aboutMeSection .helloText h2 {
+  color: #092337;
   font-family: "Staatliches", sans-serif;
+  font-size: 48px;
   font-weight: 100;
 }
-.aboutMe .right p {
-  color: #000000;
-  font-size: 20px;
+.aboutMeSection .helloText p {
+  color: #092337;
   font-family: "Space Grotesk", sans-serif;
-  margin-top: 4%;
-}
-
-.skills {
-  display: flex;
-  margin-top: 14%;
-  color: black;
-}
-.skills .left {
-  width: 50%;
+  font-size: 20px;
   margin-top: 30px;
 }
-.skills .left h3 {
-  font-size: 22px;
-  font-family: "Staatliches", sans-serif;
-  color: #222725;
-  font-weight: 100;
+
+@keyframes wobble-hor-bottom {
+  0%, 100% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+  15% {
+    -webkit-transform: translateX(-10px) rotate(-6deg);
+    transform: translateX(-10px) rotate(-6deg);
+  }
+  30% {
+    -webkit-transform: translateX(5px) rotate(6deg);
+    transform: translateX(5px) rotate(6deg);
+  }
+  45% {
+    -webkit-transform: translateX(-8px) rotate(-3.6deg);
+    transform: translateX(-8px) rotate(-3.6deg);
+  }
+  60% {
+    -webkit-transform: translateX(4px) rotate(2.4deg);
+    transform: translateX(4px) rotate(2.4deg);
+  }
+  75% {
+    -webkit-transform: translateX(-3px) rotate(-1.2deg);
+    transform: translateX(-3px) rotate(-1.2deg);
+  }
 }
-.skills .left p {
+.skills {
+  color: #092337;
+  display: flex;
+  padding: 180px 6% 50px 6%;
+}
+.skills .skillsText {
+  width: 50%;
+}
+.skills .skillsText p {
   margin-top: 6%;
   padding-top: 20px;
-  color: #000000;
-  font-size: 20px;
+  color: #092337;
   font-family: "Space Grotesk", sans-serif;
+  font-size: 20px;
   width: 90%;
 }
-.skills .right {
+.skills .skillsTab {
   width: 50%;
-  padding-left: 3%;
 }
-.skills .right h3 {
+.skills .skillsTab h3 {
   font-size: 22px;
   font-family: "Staatliches", sans-serif;
-  color: #222725;
   font-weight: 100;
 }
-.skills .right .tab {
+.skills .skillsTab .tab {
   margin-top: 6%;
 }
-.skills .right .tab .box {
+.skills .skillsTab .tab .box {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #d9d9d9;
@@ -234,24 +222,25 @@ nav ul li a:hover::after {
   opacity: 0;
   transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
 }
-.skills .right .tab .box p {
-  font-family: "Space Grotesk", sans-serif;
+.skills .skillsTab .tab .box p {
   font-weight: bold;
+  color: #092337;
+  font-family: "Space Grotesk", sans-serif;
   font-size: 26px;
 }
-.skills .right .tab .box.active {
+.skills .skillsTab .tab .box.active {
   transform: translateX(0%);
   opacity: 1;
 }
 
 .projects {
-  margin-top: 14%;
+  padding: 180px 6% 50px 6%;
 }
-.projects h1 {
+.projects h2 {
+  color: #092337;
+  font-family: "Staatliches", sans-serif;
   font-size: 48px;
   font-weight: 100;
-  font-family: "Staatliches", sans-serif;
-  color: #222725;
 }
 .projects .cards {
   display: flex;
@@ -263,7 +252,7 @@ nav ul li a:hover::after {
   width: 450px;
   height: 20.5%;
   padding: 10px;
-  border: 2px solid #000000;
+  border: 2px solid black;
   justify-content: center;
   margin: 4% auto;
   z-index: 9;
@@ -275,7 +264,7 @@ nav ul li a:hover::after {
   padding-bottom: 8px;
   justify-content: center;
   background-color: #ffffff;
-  border: 1px solid #000000;
+  border: 1px solid black;
   margin: 4px;
   border-radius: 20px;
   width: 42px;
@@ -292,28 +281,98 @@ nav ul li a:hover::after {
 .projects .cards .card img {
   width: 100%;
   height: 200px;
-  border: 1px solid #000000;
+  border: 1px solid black;
   z-index: 0;
 }
-.projects .cards .card h3 {
+.projects .cards .card .titleAndadvencement {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.projects .cards .card .titleAndadvencement h3 {
   font-size: 22px;
   font-family: "Staatliches", sans-serif;
-  color: #222725;
+  color: #092337;
   font-weight: 100;
   margin-top: 15px;
 }
+.projects .cards .card .titleAndadvencement .advencementCard {
+  background-color: red;
+  color: #092337;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 14px;
+  color: white;
+  width: 100px;
+  padding: 2px 0 2px 0;
+  text-align: center;
+  border-radius: 15px;
+  margin-top: 13px;
+}
+.projects .cards .card .titleAndadvencement .projectOne {
+  background-color: #85c871;
+  border: 2px solid #7ab767;
+}
+.projects .cards .card .titleAndadvencement .projectTwo {
+  background-color: #ffb964;
+  border: 2px solid #ebaa5c;
+}
+.projects .cards .card .titleAndadvencement .tooltip-container {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100px;
+}
+.projects .cards .card .titleAndadvencement .tooltip-container .tooltip {
+  position: absolute;
+  left: -110px;
+  padding: 0.5em;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  color: white;
+  border-radius: 15px;
+  width: 210px;
+  font-size: 14px;
+}
+.projects .cards .card .titleAndadvencement .tooltip-container .projectOneTooltip {
+  background-color: #85c871;
+  border: 2px solid #7ab767;
+  height: 72px;
+  top: -80px;
+}
+.projects .cards .card .titleAndadvencement .tooltip-container .projectTwoTooltip {
+  background-color: #ffb964;
+  border: 2px solid #ebaa5c;
+  height: 92px;
+  top: -100px;
+}
+.projects .cards .card .titleAndadvencement .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 0.6em;
+  width: 0.6em;
+  bottom: -0.2em;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  background: var(--background-tooltip); /* Use the same background color as the tooltip */
+}
+.projects .cards .card .titleAndadvencement .tooltip-container:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
 .projects .cards .card p {
   margin-top: 6%;
-  color: #000000;
-  font-size: 19px;
+  color: #092337;
   font-family: "Space Grotesk", sans-serif;
+  font-size: 19px;
   margin-top: 3px;
 }
 .projects .cards .card button {
   all: unset;
   width: 160px;
   padding: 10px 0;
-  border: 2px solid #000000;
+  border: 2px solid black;
   margin-top: 50px;
   justify-content: center;
   margin-left: 50%;
@@ -322,11 +381,11 @@ nav ul li a:hover::after {
   text-align: center;
 }
 .projects .cards .card button:hover {
-  box-shadow: 5px 5px 0px 1px #000000;
+  box-shadow: 5px 5px 0px 1px black;
   transition: 180ms;
 }
 .projects .cards .card button:not(:hover) {
-  box-shadow: 0px 0px 0px 0px #000000;
+  box-shadow: 0px 0px 0px 0px black;
   transition: 180ms;
 }
 .projects .cards .card:hover .languages {
@@ -340,124 +399,153 @@ nav ul li a:hover::after {
   transition: 0.4s;
 }
 
-.contact {
-  margin: 14% auto 0;
-  display: block;
+.lepine {
+  padding: 180px 6% 50px 6%;
 }
-.contact h2 {
+.lepine h2 {
+  color: #092337;
+  font-family: "Staatliches", sans-serif;
   font-size: 48px;
   font-weight: 100;
-  font-family: "Staatliches", sans-serif;
-  color: #222725;
-  margin: 50px auto;
-}
-.contact a {
-  text-decoration: none;
-  color: black;
-}
-.contact a .links {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid #d9d9d9;
-  padding: 20px 0px;
-}
-.contact a .links .leftContact {
-  width: 170px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.contact a .links .leftContact p {
-  font-family: "Space Grotesk", sans-serif;
-  font-weight: bold;
-  font-size: 26px;
-}
-.contact a .links .leftContact img {
-  width: 32px;
-}
-.contact a .links .material-symbols-outlined {
-  font-size: 30px;
-  font-weight: bold;
-  opacity: 0;
-}
-.contact a .links:hover .material-symbols-outlined {
-  animation: fillAnimation 1s forwards;
-}
-
-@keyframes fillAnimation {
-  0% {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-}
-.lepine {
-  margin-top: 14%;
+  margin-bottom: 30px;
 }
 .lepine .content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.lepine .content img {
-  width: 300px;
-  height: 300px;
-}
 .lepine .content .lepineText {
-  color: #000000;
-  font-size: 20px;
+  color: #092337;
   font-family: "Space Grotesk", sans-serif;
-  margin-top: 4%;
-  width: 45%;
+  font-size: 20px;
+  width: 50%;
 }
 .lepine .content .lepineText .linkToFacebook {
   text-decoration: none;
-  color: #000000;
   color: #ff9500;
   font-weight: 500;
 }
+.lepine .content img {
+  --a: 9deg; /* control the angle of rotation (the smaller, the better) */
+  width: 300px;
+  height: 300px;
+  aspect-ratio: 1;
+  transform: perspective(400px) rotate3d(var(--r, 1, -1), 0, calc(var(--i, 1) * var(--a)));
+  -webkit-mask: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 40%, #000, rgba(0, 0, 0, 0.8) 60%) 100% 100%/250% 250%;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.lepine .content .alt {
+  --r: 1, 1;
+  -webkit-mask: linear-gradient(45deg, rgba(0, 0, 0, 0.8) 40%, #000, rgba(0, 0, 0, 0.8) 60%) 0 100%/250% 250%;
+}
+.lepine .content img:hover {
+  --i: -1;
+  -webkit-mask-position: 0 0;
+}
+.lepine .content .alt:hover {
+  -webkit-mask-position: 100% 0;
+}
 
-@media (max-width: 660px) {
+.contact {
+  display: block;
+  padding: 180px 6% 50px 6%;
+}
+.contact h2 {
+  color: #092337;
+  font-family: "Staatliches", sans-serif;
+  font-size: 48px;
+  font-weight: 100;
+}
+.contact a {
+  text-decoration: none;
+  color: black;
+}
+.contact a .link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #d9d9d9;
+  padding: 20px 0px;
+}
+.contact a .link .leftContact {
+  width: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contact a .link .leftContact p {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: bold;
+  font-size: 26px;
+}
+.contact a .link .leftContact img {
+  width: 32px;
+}
+.contact a .link .material-symbols-outlined {
+  font-size: 30px;
+  font-weight: bold;
+  opacity: 1;
+}
+
+footer p {
+  text-align: center;
+  color: #092337;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 740px) {
+  .aboutMeSection {
+    flex-direction: column;
+  }
+  .aboutMeSection .profilePictureAndHelloEmoticon {
+    width: 100%;
+  }
+  .aboutMeSection .helloText {
+    width: 100%;
+    margin-top: 70px;
+  }
+  .skills {
+    flex-direction: column;
+  }
+  .skills .skillsText {
+    width: 100%;
+    margin-top: -50px;
+  }
+  .skills .skillsTab {
+    width: 100%;
+    margin-top: 70px;
+  }
   .lepine {
-    margin-top: 14%;
-  }
-  .lepine .content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .lepine .content img {
-    width: 300px;
-    height: 300px;
-    margin-top: 50px;
+    flex-direction: column;
   }
   .lepine .content .lepineText {
     width: 100%;
   }
+  .lepine .content img {
+    margin-top: 70px;
+    margin-left: 25%;
+    transform: translateX(-25%);
+    --a: 9deg; /* control the angle of rotation (the smaller, the better) */
+    width: 250px;
+    height: 250px;
+    aspect-ratio: 1;
+    transform: perspective(400px) rotate3d(var(--r, 1, -1), 0, calc(var(--i, 1) * var(--a)));
+    -webkit-mask: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 40%, #000, rgba(0, 0, 0, 0.8) 60%) 100% 100%/250% 250%;
+    transition: 0.4s;
+    cursor: pointer;
+  }
+  .lepine .content .alt {
+    --r: 1, 1;
+    -webkit-mask: linear-gradient(45deg, rgba(0, 0, 0, 0.8) 40%, #000, rgba(0, 0, 0, 0.8) 60%) 0 100%/250% 250%;
+  }
+  .lepine .content img:hover {
+    --i: -1;
+    -webkit-mask-position: 0 0;
+  }
+  .lepine .content .alt:hover {
+    -webkit-mask-position: 100% 0;
+  }
 }
-@media (max-width: 800px) {
-  .aboutMe {
-    display: grid;
-  }
-  .aboutMe .right {
-    width: 100%;
-    margin-top: 50px;
-  }
-  .skills {
-    display: grid;
-  }
-  .skills .left {
-    width: 100%;
-    margin-left: 23px;
-  }
-  .skills .right {
-    width: 100%;
-    margin-top: 60px;
-  }
-}
-
-/*# sourceMappingURL=style.css.map */
