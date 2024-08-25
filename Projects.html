@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Timéo DOOM | Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <input id="burger" type="checkbox" />
+
+      <label for="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="navbar">
+        <ul class="nav-links">
+          <div class="left">
+            <a href="./index.html" class="logo">© Créé par Timéo</a>
+          </div>
+
+          <div class="right">
+            <li class="nav-item">
+              <a href="./Projects.html">Projets</a>
+              <div class="dot"></div>
+            </li>
+            <li class="nav-item">
+              <a href="./About.html">À propos</a>
+              <div class="dot"></div>
+            </li>
+          </div>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="projects-section">
+      <h1>Projets</h1>
+
+      <section class="projects-content">
+        <div class="first-project">
+          <div class="about-first-project">
+            <div class="first-project-title">
+              <img
+                class="logo"
+                src="./assets/mapmymemoriesLogo.png"
+                alt="first application logo"
+              />
+              <p class="box-title">MapMyMemories</p>
+            </div>
+            <p class="description">
+              MapMyMemories vous permet de placer des pins sur une carte
+              interactive et d’y ajouter des photos pour immortaliser vos
+              moments précieux. Marquez vos lieux favoris, ajoutez des
+              descriptions et partagez vos cartes avec vos proches.
+            </p>
+            <div class="state-project">
+              <p class="state">En cours de création</p>
+              <img
+                class="language-logo"
+                src="./assets/reactNativeLogo.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <img
+            class="iphoneMockup"
+            src="./assets/mapMyMemoriesMockup.png"
+            alt=""
+          />
+        </div>
+
+        <section class="bottom-section">
+          <div class="skills">
+            <p class="box-title">Compétences</p>
+            <div class="skill">
+              <img
+                class="skill-language-logo-reactNative"
+                src="./assets/reactNativeLogo.svg"
+                alt=""
+              />
+              <div class="progress-bar">
+                <div class="progretion-3"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <img
+                class="skill-language-logo-reactJS"
+                src="./assets/reactJsLogo.png"
+                alt=""
+              />
+              <div class="progress-bar">
+                <div class="progretion-2"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <img
+                class="skill-language-logo-sass"
+                src="./assets/sassLogo.png"
+                alt=""
+              />
+              <div class="progress-bar color-language">
+                <div class="progretion-1"></div>
+              </div>
+            </div>
+          </div>
+          <div class="second-project">
+            <div class="title-state">
+              <p class="box-title">AIM trainer</p>
+              <p class="state">En ligne</p>
+            </div>
+
+            <p class="description">
+              Ce site web permet de s’entrainer à cliquer de façon précise.
+            </p>
+            <img
+              class="aim-trainer-project"
+              src="./assets/macMockup.png"
+              alt=""
+            />
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <button id="theme-switch">
+        <img id="icon" src="./assets/moon.svg" alt="" />
+      </button>
+      <div class="links">
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/timéo-doom-387a82258/"
+          >Linkedin</a
+        >
+        <a target="_blank" href="https://github.com/TimeoDoom">GitHub</a>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
