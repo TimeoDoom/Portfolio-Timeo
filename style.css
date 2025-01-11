@@ -32,7 +32,7 @@ p {
 article {
   background-color: var(--box-color);
   backdrop-filter: blur(var(--blur-effect));
-  padding: 35px;
+  padding: 25px;
   border-radius: var(--border-radius);
   font-size: var(--font-size);
   font-family: var(--raleway-font);
@@ -507,6 +507,11 @@ nav ul li .dot {
   }
   100% {
     transform: translateY(0%);
+  }
+}
+@media screen and (max-width: 425px) {
+  h1 {
+    font-size: 65px;
   }
 }
 
