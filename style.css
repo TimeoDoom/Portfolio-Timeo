@@ -509,7 +509,7 @@ nav ul li .dot {
     transform: translateY(0%);
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 625px) {
   h1 {
     font-size: 65px;
   }
