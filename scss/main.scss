@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-height: 100vh;
+  margin: 1% 8%;
+  background-color: var(--base-color);
+}
+
+h1 {
+  font-family: var(--oswald-font);
+  font-size: 140px;
+  text-align: center;
+  margin: 30px 0px;
+  animation: slide-up 1s ease-in;
+  color: var(--text-color);
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+p {
+  color: var(--text-color);
+}
+
+article {
+  background-color: var(--box-color);
+  backdrop-filter: blur(var(--blur-effect));
+  padding: 25px;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size);
+  font-family: var(--raleway-font);
+  font-weight: 500;
+  letter-spacing: var(--article-letter-spacing);
+  align-content: center;
+  z-index: 2;
+}
+
+@import "variables.scss";
+@import "footer.scss";
+@import "navBarUI.scss";
+@import "homePage.scss";
+@import "aboutPage.scss";
+@import "projectsPage.scss";
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(80%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@media screen and (max-width: 625px) {
+  h1 {
+    font-size: 65px;
+  }
+}
