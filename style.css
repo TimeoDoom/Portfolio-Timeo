@@ -294,6 +294,10 @@ nav ul li .dot {
   gap: 54px;
 }
 
+.aboutPage ul {
+  color: var(--text-color);
+}
+
 @media screen and (max-width: 1024px) {
   .aboutPage {
     width: 100%;
