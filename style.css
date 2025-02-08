@@ -294,10 +294,6 @@ nav ul li .dot {
   gap: 54px;
 }
 
-.aboutPage ul {
-  color: var(--text-color);
-}
-
 @media screen and (max-width: 1024px) {
   .aboutPage {
     width: 100%;
@@ -333,6 +329,9 @@ nav ul li .dot {
   display: flex;
   align-items: center;
 }
+.projectsPage article .skills div .skill img {
+  width: 40px;
+}
 .projectsPage article .skills div .skill .progress {
   border: 2px solid;
   width: 150px;
@@ -366,32 +365,32 @@ nav ul li .dot {
   border-radius: 25px;
   background-color: #ffdf00;
 }
-.projectsPage article .skills div .skill .sass {
-  border-color: #cc6699;
+.projectsPage article .skills div .skill .java {
+  border-color: #51809d;
 }
-.projectsPage article .skills div .skill .sass div {
-  width: 80%;
+.projectsPage article .skills div .skill .java div {
+  width: 60%;
   height: 16px;
   border-radius: 25px;
-  background-color: #cc6699;
+  background-color: #51809d;
 }
-.projectsPage article .skills div .skill .bootstrap {
-  border-color: #5e3b7f;
+.projectsPage article .skills div .skill .c {
+  border-color: #2196f3;
 }
-.projectsPage article .skills div .skill .bootstrap div {
+.projectsPage article .skills div .skill .c div {
+  width: 65%;
+  height: 16px;
+  border-radius: 25px;
+  background-color: #2196f3;
+}
+.projectsPage article .skills div .skill .python {
+  border-color: #4888ba;
+}
+.projectsPage article .skills div .skill .python div {
   width: 50%;
   height: 16px;
   border-radius: 25px;
-  background-color: #5e3b7f;
-}
-.projectsPage article .skills div .skill .tailwind {
-  border-color: #38bdf8;
-}
-.projectsPage article .skills div .skill .tailwind div {
-  width: 50%;
-  height: 16px;
-  border-radius: 25px;
-  background-color: #38bdf8;
+  background-color: #4888ba;
 }
 .projectsPage article .skills div .skill .vsc {
   border-color: #1f9cf0;
