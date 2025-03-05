@@ -293,6 +293,9 @@ nav ul li .dot {
   display: grid;
   gap: 54px;
 }
+.aboutPage section article ul li {
+  color: white;
+}
 
 @media screen and (max-width: 1024px) {
   .aboutPage {
