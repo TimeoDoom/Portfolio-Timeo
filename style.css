@@ -293,7 +293,7 @@ nav ul li .dot {
   display: grid;
   gap: 54px;
 }
-.aboutPage section article ul li {
+ul li {
   color: var(--text-color);
 }
 
