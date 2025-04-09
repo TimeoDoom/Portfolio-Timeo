@@ -25,6 +25,10 @@ h2 {
   color: var(--text-color);
 }
 
+a {
+  color: var(--links-color);
+}
+
 p {
   color: var(--text-color);
 }
@@ -46,6 +50,7 @@ article {
   --base-color: #fff;
   --text-color: #000;
   --box-color: #f5f5f5;
+  --links-color: #46abf8;
   --border-radius: 35px;
   --raleway-font: "Raleway", arial, sans-serif;
   --oswald-font: "Oswald", arial, sans-serif;
@@ -74,6 +79,9 @@ footer #theme-switch {
   background-color: var(--box-color);
   border: none;
   cursor: pointer;
+}
+footer #theme-switch img {
+  margin-top: 3px;
 }
 footer ul {
   display: flex;
@@ -293,8 +301,9 @@ nav ul li .dot {
   display: grid;
   gap: 54px;
 }
-ul li {
+.aboutPage section article ul li {
   color: var(--text-color);
+  list-style: none;
 }
 
 @media screen and (max-width: 1024px) {
@@ -527,5 +536,3 @@ ul li {
     font-size: 65px;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
