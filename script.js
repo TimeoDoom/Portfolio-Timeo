@@ -26,13 +26,13 @@ const themeIcon = document.getElementById("icon");
 
 const enableDarkmode = () => {
   document.body.classList.add("darkmode");
-  themeIcon.src = "./assets/sun.svg";
+  themeIcon.src = "../assets/sun.svg";
   localStorage.setItem("darkmode", "active");
 };
 
 const disableDarkmode = () => {
   document.body.classList.remove("darkmode");
-  themeIcon.src = "./assets/moon.svg";
+  themeIcon.src = "../assets/moon.svg";
   localStorage.setItem("darkmode", "null");
 };
 
