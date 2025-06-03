@@ -25,6 +25,11 @@ h2 {
   color: var(--text-color);
 }
 
+h3 {
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
 a {
   color: var(--links-color);
 }
@@ -49,7 +54,7 @@ article {
 :root {
   --base-color: #fff;
   --text-color: #000;
-  --box-color: #f5f5f5;
+  --box-color: hsla(0, 0%, 96%, 0.655);
   --links-color: #46abf8;
   --border-radius: 35px;
   --raleway-font: "Raleway", arial, sans-serif;
@@ -63,7 +68,7 @@ article {
 .darkmode {
   --base-color: #000000;
   --text-color: #e4e4e4;
-  --box-color: #2a2a2a;
+  --box-color: #62626256;
 }
 
 footer {
@@ -93,6 +98,11 @@ footer ul a {
   color: #a5a5a5;
   font-family: var(--raleway-font);
   font-size: 19px;
+}
+footer ul a:hover {
+  transition: 0.4s;
+  color: #b8b8b8;
+  font-weight: 500;
 }
 
 .homeFooter {
@@ -249,6 +259,13 @@ nav ul li .dot {
   transform: translateY(-50%);
   justify-content: center;
   margin-left: -8%;
+  translate: 0;
+  transition: translate 0.8s ease-out;
+}
+@starting-style {
+  .accueilPage {
+    translate: 100% 0;
+  }
 }
 .accueilPage img {
   border-radius: 35px;
@@ -294,7 +311,7 @@ nav ul li .dot {
   }
 }
 .aboutPage {
-  margin: 0 16%;
+  margin: 0 8%;
   z-index: 1;
 }
 .aboutPage section {
@@ -304,6 +321,22 @@ nav ul li .dot {
 .aboutPage section article ul li {
   color: var(--text-color);
   list-style: none;
+}
+.aboutPage section article div {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 20px;
+}
+.aboutPage section article div img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
+}
+.aboutPage section article div figcaption {
+  color: var(--text-color);
 }
 
 @media screen and (max-width: 1024px) {
@@ -480,6 +513,217 @@ nav ul li .dot {
 }
 .projectsPage section article p {
   text-align: left;
+}
+
+@media screen and (max-width: 1600px) {
+  .projectsPage section article {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .projectsPage {
+    width: 90%;
+    margin: 0 auto;
+    transform: translateX(0%);
+  }
+  .projectsPage article .skills {
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    gap: 20px;
+  }
+  .projectsPage section {
+    flex-wrap: wrap;
+  }
+  .projectsPage section article {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .projectsPage {
+    width: 100%;
+    margin: 100px auto 0;
+    padding: 0 10px;
+  }
+  article .skills {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 540px) {
+  article .skills {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.contactPage form {
+  display: grid;
+  gap: 20px;
+}
+.contactPage form input,
+.contactPage form textarea,
+.contactPage form button {
+  border-radius: 25px;
+  border: none;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  font-size: 18px;
+  backdrop-filter: blur(var(--blur-effect));
+}
+.contactPage form input,
+.contactPage form textarea {
+  background-color: var(--box-color);
+}
+.contactPage form input {
+  height: 50px;
+  padding: 10px;
+  color: var(--text-color);
+}
+.contactPage form textarea {
+  height: 35vh;
+  padding: 18px;
+  resize: vertical;
+  color: var(--text-color);
+}
+.contactPage form button {
+  width: 40%;
+  height: 40px;
+  background-color: var(--links-color);
+  color: white;
+  padding: 10px;
+  backdrop-filter: none;
+}
+.contactPage form button:hover {
+  background-color: #0091ff;
+  cursor: pointer;
+}
+
+.skillsPages {
+  display: grid;
+  position: relative;
+  justify-content: center;
+  gap: 54px;
+}
+.skillsPages article {
+  display: flex;
+  flex-direction: column; /* Arrange le contenu de l'article en colonne */
+  justify-content: flex-start; /* Aligne le contenu interne en haut */
+}
+.skillsPages article .skills {
+  display: flex;
+  justify-content: space-between;
+  gap: 70px;
+}
+.skillsPages article .skills div {
+  display: grid;
+  gap: 25px;
+}
+.skillsPages article .skills div .skill {
+  display: flex;
+  align-items: center;
+}
+.skillsPages article .skills div .skill img {
+  width: 40px;
+}
+.skillsPages article .skills div .skill .progress {
+  border: 2px solid;
+  width: 150px;
+  height: 20px;
+  border-radius: 25px;
+}
+.skillsPages article .skills div .skill .html {
+  border-color: #fc490b;
+}
+.skillsPages article .skills div .skill .html div {
+  width: 80%;
+  height: 16px;
+  border-radius: 25px;
+  background-color: #fc490b;
+}
+.skillsPages article .skills div .skill .css {
+  border-color: #2196f3;
+}
+.skillsPages article .skills div .skill .css div {
+  width: 80%;
+  height: 16px;
+  border-radius: 25px;
+  background-color: #2196f3;
+}
+.skillsPages article .skills div .skill .js {
+  border-color: #ffdf00;
+}
+.skillsPages article .skills div .skill .js div {
+  width: 55%;
+  height: 16px;
+  border-radius: 25px;
+  background-color: #ffdf00;
+}
+.skillsPages article .skills div .skill .java {
+  border-color: #51809d;
+}
+.skillsPages article .skills div .skill .java div {
+  width: 60%;
+  height: 16px;
+  border-radius: 25px;
+  background-color: #51809d;
+}
+.skillsPages article .skills div .skill .c {
+  border-color: #2196f3;
+}
+.skillsPages article .skills div .skill .c div {
+  width: 65%;
+  height: 16px;
+  border-radius: 25px;
+  background-color: #2196f3;
+}
+.skillsPages article .skills div .skill .python {
+  border-color: #4888ba;
+}
+.skillsPages article .skills div .skill .python div {
+  width: 50%;
+  height: 16px;
+  border-radius: 25px;
+  background-color: #4888ba;
+}
+.skillsPages article .skills div .skill .vsc {
+  border-color: #1f9cf0;
+}
+.skillsPages article .skills div .skill .vsc div {
+  width: 95%;
+  height: 16px;
+  border-radius: 25px;
+  background-color: #1f9cf0;
+}
+.skillsPages article .skills div .skill .figma {
+  border-color: #0acf83;
+}
+.skillsPages article .skills div .skill .figma div {
+  width: 90%;
+  height: 16px;
+  border-radius: 25px;
+  background-color: #0acf83;
+}
+.skillsPages article .skills div .skill .teams {
+  border-color: #464eb7;
+}
+.skillsPages article .skills div .skill .teams div {
+  width: 70%;
+  height: 16px;
+  border-radius: 25px;
+  background-color: #464eb7;
+}
+.skillsPages article .skills div .skill .linux {
+  border-color: #fdb820;
+}
+.skillsPages article .skills div .skill .linux div {
+  width: 60%;
+  height: 16px;
+  border-radius: 25px;
+  background-color: #fdb820;
+}
+.skillsPages article p {
+  margin-bottom: 30px;
 }
 
 @media screen and (max-width: 1600px) {
