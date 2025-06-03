@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Timéo DOOM | Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
+        </label>
+
+        <ul class="menu__box">
+          <li>
+            <a class="menu__item" href="./index.html">© Créé par Timéo</a>
+          </li>
+          <li><a class="menu__item" href="./about.html">À propos</a></li>
+          <li>
+            <a class="menu__item" href="./projects.html"
+              >Projets et Réalisation</a
+            >
+          </li>
+          <li><a class="menu__item" href="./skills.html">Compétences</a></li>
+          <li>
+            <a class="menu__item" href="./contact.html">Me contacter</a>
+          </li>
+        </ul>
+      </div>
+      <nav>
+        <a href="./index.html">© Créé par Timéo</a>
+        <ul>
+          <li class="nav-item">
+            <a href="./about.html">À propos</a>
+            <div class="dot"></div>
+          </li>
+          <li class="nav-item">
+            <a href="./projects.html">Projets et Réalisation</a>
+            <div class="dot"></div>
+          </li>
+          <li class="nav-item">
+            <a href="./skills.html">Compétences</a>
+            <div class="dot"></div>
+          </li>
+
+          <li class="nav-item">
+            <a href="./contact.html">Me contacter</a>
+            <div class="dot"></div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="contactPage">
+      <h1>Contactez-moi</h1>
+      <form action="https://formspree.io/f/xldbprjb" method="POST">
+        <label class="textField">
+          <input placeholder="Adresse mail" type="email" name="email" />
+        </label>
+        <label class="textField">
+          <textarea placeholder="Message" name="message"></textarea>
+        </label>
+        <button class="sendButton" type="submit">Envoyer</button>
+      </form>
+    </main>
+
+    <footer class="otherFooter">
+      <button id="theme-switch">
+        <img id="icon" src="../assets/moon.svg" alt="" />
+      </button>
+      <ul>
+        <li>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/timéo-doom-387a82258/"
+            >Linkedin</a
+          >
+        </li>
+        <li>
+          <a target="_blank" href="https://github.com/TimeoDoom">GitHub</a>
+        </li>
+      </ul>
+    </footer>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>
