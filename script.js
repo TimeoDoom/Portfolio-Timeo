@@ -1,44 +1,38 @@
-document.querySelectorAll(".nav-item").forEach((item) => {
-  const dot = item.querySelector(".dot");
+// Intersection reveal
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting) e.target.classList.add('active');
+      });
+    },{threshold:0.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-  item.addEventListener("mousemove", (event) => {
-    const rect = item.getBoundingClientRect();
-    const x = event.clientX - rect.left;
-    const y = event.clientY - rect.top;
+    // Smooth scroll for nav
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        e.preventDefault();
+        const id = a.getAttribute('href');
+        if(id === '#') return;
+        document.querySelector(id).scrollIntoView({behavior:'smooth',block:'start'});
+      })
+    });
 
-    const centerX = rect.width / 2;
-    const centerY = 50; // Ajustement pour correspondre à la nouvelle position du point
+    // Micro interactions: button tilt
+    document.querySelectorAll('.btn').forEach(b=>{
+      b.addEventListener('pointermove', (ev)=>{
+        const r = b.getBoundingClientRect();
+        const x = (ev.clientX - r.left - r.width/2)/r.width*24;
+        const y = (ev.clientY - r.top - r.height/2)/r.height*24;
+        b.style.transform = `perspective(600px) rotateX(${ -y }deg) rotateY(${ x }deg) translateZ(0)`;
+      });
+      b.addEventListener('pointerleave', ()=> b.style.transform='');
+    });
 
-    const distX = (x - centerX) / 2; // Augmentation de la sensibilité horizontale
-    const distY = (y - centerY) / 2; // Augmentation de la sensibilité verticale
 
-    dot.style.transform = `translate(${distX}px, ${distY}px)`;
-  });
+    // Mobile menu toggle
 
-  item.addEventListener("mouseleave", () => {
-    dot.style.transform = `translateX(-50%)`;
-  });
-});
-
-let darkmode = localStorage.getItem("darkmode");
-const themeSwitch = document.getElementById("theme-switch");
-const themeIcon = document.getElementById("icon");
-
-const enableDarkmode = () => {
-  document.body.classList.add("darkmode");
-  themeIcon.src = "./assets/sun.svg";
-  localStorage.setItem("darkmode", "active");
-};
-
-const disableDarkmode = () => {
-  document.body.classList.remove("darkmode");
-  themeIcon.src = "./assets/moon.svg";
-  localStorage.setItem("darkmode", "null");
-};
-
-if (darkmode === "active") enableDarkmode();
-
-themeSwitch.addEventListener("click", () => {
-  darkmode = localStorage.getItem("darkmode");
-  darkmode !== "active" ? enableDarkmode() : disableDarkmode();
-});
+    const burger=document.querySelector('.burger');
+    const mobileMenu=document.querySelector('.mobile-menu');
+    burger.addEventListener('click',()=>{
+      burger.classList.toggle('active');
+      mobileMenu.style.display=mobileMenu.style.display==='flex'?'none':'flex';
+    });
