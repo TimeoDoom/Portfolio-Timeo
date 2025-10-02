@@ -1,103 +1,277 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <title>Timéo DOOM | Portfolio</title>
-  </head>
-  <body>
-    <header>
-      <div class="hamburger-menu">
-        <input id="menu__toggle" type="checkbox" />
-        <label class="menu__btn" for="menu__toggle">
-          <span></span>
-        </label>
-
-        <ul class="menu__box">
-          <li>
-            <a class="menu__item" href="./index.html">© Créé par Timéo</a>
-          </li>
-          <li><a class="menu__item" href="./about.html">À propos</a></li>
-          <li>
-            <a class="menu__item" href="./projects.html"
-              >Projets et Réalisation</a
-            >
-          </li>
-          <li><a class="menu__item" href="./skills.html">Compétences</a></li>
-          <li>
-            <a class="menu__item" href="./contact.html">Me contacter</a>
-          </li>
-        </ul>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Timéo DOOM — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <meta name="description" content="Je suis Timéo DOOM, étudiant en BUT Informatique à l'IUT de Lannion. J'aime concevoir des expériences numériques soignées. Découvrez mon portfolio pour en savoir plus sur mes projets et compétences.">
+  <meta name="keywords" content="Timéo DOOM, Portfolio, Étudiant, Développeur, BUT Informatique, IUT de Lannion, Projets, Compétences, Innovation, Développement web, Développement logiciel">
+  <meta name="author" content="Timéo DOOM">
+</head>
+<body>
+  <div class="orb" aria-hidden="true"></div>
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="logo">T</div>
+        <div>
+          <div>Timéo DOOM</div>
+          <div>Étudiant · Dév · Innovateur</div>
+        </div>
       </div>
-      <nav>
-        <a href="./index.html">© Créé par Timéo</a>
-        <ul>
-          <li class="nav-item">
-            <a href="./about.html">À propos</a>
-            <div class="dot"></div>
-          </li>
-          <li class="nav-item">
-            <a href="./projects.html">Projets et Réalisation</a>
-            <div class="dot"></div>
-          </li>
-          <li class="nav-item">
-            <a href="./skills.html">Compétences</a>
-            <div class="dot"></div>
-          </li>
+      <div class="menu">
+        <a href="#about">À propos</a>
+        <a href="#projects">Projets</a>
+        <a href="#skills">Compétences</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="burger" onclick="document.querySelector('.mobile-menu').classList.toggle('active')">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="mobile-menu">
+        <a href="#about">À propos</a>
+        <a href="#projects">Projets</a>
+        <a href="#skills">Compétences</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-          <li class="nav-item">
-            <a href="./contact.html">Me contacter</a>
-            <div class="dot"></div>
-          </li>
-        </ul>
-      </nav>
-    </header>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="copy">
+        <h1>Design. Code. Produit.</h1>
+        <p>Je suis Timéo. Étudiant en BUT Informatique à l'IUT de Lannion. J'aime concevoir des expériences numériques soignées.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#contact">Me contacter</a>
+          <a class="btn" href="#projects">Voir mes projets</a>
+        </div>
+      </div>
+      <div class="card">
+        <div></div>
+        <div class="portrait">
+          <img src="./assets/portrait.jpg" alt="Portrait de Timéo DOOM">
+        </div>
+      </div>
+    </div>
+  </header>
 
-    <main class="accueilPage">
-      <img
-        src="./assets/portrait.jpg"
-        title="Portrait de Timéo Doom"
-        alt="Portrait de Timéo Doom"
-      />
-      <div>
+  <main>
+    <section id="about">
+      <div class="section-inner">
+        <h2>À propos</h2>
         <article>
-          <p class="helloText">Bonjour,</p>
-          <p class="whoIAmText">Je suis Timéo 😁</p>
+          <h3>Qui je suis ?</h3>
+          <p>
+            Je suis passionné d'informatique et d'innovation, j'ai commencé mon
+            aventure dans les Landes avec un diplôme en Systèmes Numériques au
+            <a href="https://www.saintjeanboscogabarret.fr/">lycée Saint Joseph à Gabarret</a> avant de me lancer dans
+            un BUT Informatique en Bretagne à <a href="https://iut-lannion.univ-rennes.fr/informatique">l'IUT de Lannion</a>.
+            Toujours à l'affût de nouvelles connaissances, je m'intéresse autant
+            à la technique qu'à l'aspect business des projets. J'ai eu la chance
+            de concrétiser certaines de mes idées, notamment en remportant la
+            médaille d'or du <a href="https://www.concours-lepine.com/">Concours Lépine</a> avec notre
+            <a href="https://chandelier-connecte.onrender.com/">chandelier connecté</a>. Une expérience incroyable qui
+            m'a permis de développer mes compétences en gestion de projet, de
+            l'idée à la réalisation.
+          </p>
+          <div class="figures">
+            <figure>
+              <img
+                src="./assets/gabarret.jpg"
+                alt="lycée saint joseph à gabarret"
+              />
+              <figcaption>Lycée Saint Joseph à Gabarret 2021-2024</figcaption>
+            </figure>
+            <figure>
+              <img 
+                src="./assets/lepine.jpeg"
+                alt="Médaille d'or au concours lépine 2024"
+              />
+              <figcaption>Médaille d'or au concours Lépine 2024</figcaption>
+            </figure>
+            <figure>
+              <img src="./assets/iut.png" alt="IUT de Lannion" />
+              <figcaption>IUT de Lannion 2024-2027</figcaption>
+            </figure>
+          </div>
         </article>
         <article>
+          <h3>Mes objectifs</h3>
+          <p>Je me fixe plusieurs objectifs ambitieux :</p>
+          <ul>
+            <li>
+              Maîtriser les outils technologiques pour créer des solutions
+              performantes et accessibles.
+            </li>
+            <li>
+              Allier développement et entrepreneuriat pour proposer des produits
+              innovants et disruptifs.
+            </li>
+            <li>
+              M'améliorer constamment en apprenant de nouvelles compétences et
+              en collaborant avec des experts du domaine.
+            </li>
+          </ul>
+        </article>
+        <article>
+          <h3>Soft Skills</h3>
           <p>
-            Étudiant en BUT Informatique à
-            <a href="https://iut-lannion.univ-rennes.fr/">l’IUT de Lannion</a>,
-            je suis passionné par les technologies et les projets innovants. Ma
-            formation me permet d’acquérir des compétences en programmation et
-            en gestion de projets. Je suis motivé à continuer à apprendre et à
-            relever de nouveaux défis. Actuellement à la recherche d'une
-            alternance, je souhaite mettre en pratique mes compétences en
-            développement pour contribuer à des projets innovants.
+            Au-delà des compétences techniques, je mise sur des qualités
+            essentielles :
+          </p>
+          <ul>
+            <li>
+              Adaptabilité : Je sais m'ajuster aux nouveaux contextes et
+              technologies.
+            </li>
+            <li>
+              Rigueur : Chaque ligne de code et chaque choix technique comptent.
+            </li>
+            <li>
+              Esprit d'équipe : La collaboration est la clé des projets réussis.
+            </li>
+            <li>
+              Vision business : Transformer une idée en un projet viable et
+              innovant.
+            </li>
+          </ul>
+        </article>
+        <article>
+          <h3>Ce qui me motive</h3>
+          <p>
+            Je suis animé par l'envie d'innover et de créer des solutions qui
+            ont un impact. Dans mon temps libre, j'aime aussi la pêche, une
+            activité qui m'apprend la patience et la persévérance, des valeurs
+            que j'applique dans mes projets.
+          </p>
+        </article>
+        <article>
+          <h3>Envie de travailler avec moi ?</h3>
+          <p>
+            Je suis toujours à la recherche de nouvelles opportunités.
+            téléchargez mon <a href="./assets/pdf/monCV.pdf">CV</a> et
+            <a href="#contact">contactez moi</a>.
           </p>
         </article>
       </div>
-    </main>
+    </section>
 
-    <footer class="homeFooter">
-      <button id="theme-switch">
-        <img id="icon" src="./assets/moon.svg" alt="" />
-      </button>
-      <ul>
-        <li>
-          <a
-            target="_blank"
-            href="https://www.linkedin.com/in/timéo-doom-387a82258/"
-            >Linkedin</a
-          >
-        </li>
-        <li>
-          <a target="_blank" href="https://github.com/TimeoDoom">GitHub</a>
-        </li>
-      </ul>
-    </footer>
+    <section id="projects">
+      <div class="section-inner">
+        <h2>Projets</h2>
+        <div class="grid-3">
+          <article class="project">
+            <div class="project-header">
+              <h3>Chandelier Connecté</h3>
+              <div class="project-skills">
+                <img src="./assets/skills/python.png" alt="Python" />
+                <img src="./assets/skills/html.png" alt="HTML" />
+                <img src="./assets/skills/css.png" alt="CSS" />
+                <img src="./assets/skills/reactNative.png" alt="React Native" />
+              </div>
+            </div>
+            <img src="./assets/projet1.png" alt="Chandelier Connecté" class="project-img" />
+            <p>
+              En collaboration avec Benoît Mirambeau et mon lycée, j’ai
+              codéveloppé un chandelier connecté, présenté au Concours Lépine
+              2024, où nous avons remporté l’or dans la catégorie "univers
+              connecté". J’ai conçu le site web, une application mobile,
+              contribué au développement du micro-logiciel et de l'électronique pour faire fonctionner
+              les prototypes.
+              <a target="_blank" href="https://chandelier-connecte.onrender.com/">En savoir plus</a>
+            </p>
+          </article>
+          <article class="project">
+            <div class="project-header">
+              <h3>Site JO Paris 2024 (BUT info)</h3>
+              <div class="project-skills">
+                <img src="./assets/skills/html.png" alt="HTML" />
+                <img src="./assets/skills/css.png" alt="CSS" />
+                <img src="./assets/skills/js.png" alt="JavaScript" />
+                <img src="./assets/skills/figma.png" alt="Figma" />
+              </div>
+            </div>
+            <img src="./assets/projet2.png" alt="Site JO Paris 2024" class="project-img" />
+            <p>
+              Dans le cadre de mon BUT informatique, j’ai réalisé un projet
+              portant sur la création d’un site fictif dédié aux JO Paris 2024. Ce
+              travail m’a permis de répondre à un besoin client de manière
+              complète, en passant par l’analyse des exigences, la conception, le
+              développement et la mise en ligne. J’ai également appliqué des
+              méthodologies de gestion de projet pour assurer une livraison
+              conforme aux attentes.
+            </p>
+          </article>
+          <article class="project">
+            <div class="project-header">
+              <h3>Jeu snake dans le terminal</h3>
+              <div class="project-skills">
+                <img src="./assets/skills/c.png" alt="C" />
+              </div>
+            </div>
+            <img src="./assets/projet3.png" alt="Jeu snake" class="project-img" />
+            <p>
+              Dans le cadre de mon BUT informatique, j’ai réalisé un projet
+              portant sur la création du jeu snake dans le terminal. Dans cette
+              version, il y a des obstacles ainsi que des portes dans les bordures
+              du plateau qui sont des raccourcis.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    <script src="./script.js"></script>
-  </body>
+    <section id="skills">
+      <div class="section-inner">
+        <h2>Compétences</h2>
+        <div class="chips">
+          <div class="chip java">Java</div>
+          <div class="chip react">React JS</div>
+          <div class="chip c">C</div>
+          <div class="chip python">Python</div>
+          <div class="chip postgresql">PostgreSQL</div>
+          <div class="chip git">Git</div>
+          <div class="chip docker">Docker</div>
+          <div class="chip linux">Linux</div>
+          <div class="chip figma">Figma</div>
+          <div class="chip teams">Teams</div>
+          <div class="chip vscode">VS code</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-inner">
+        <h2>Contact</h2>
+        <div class="contact-card">
+          <div>
+            <div>Timéo DOOM</div>
+            <div>Étudiant | Dév logiciel</div>
+          </div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <a class="btn" href="mailto:timeodoom@gmail.com">Email</a>
+            <a class="btn" href="./assets/pdf/monCV.pdf" download>Télécharger CV</a>
+          </div>
+        </div>
+        <div class="contact-form">
+            <form action="https://formspree.io/f/xldbprjb" method="POST">
+              <input type="text" id="name" name="name" placeholder="Nom Prénom" required>
+              <input type="email" id="email" name="email" placeholder="Adresse email" required>
+              <textarea id="message" name="message" placeholder="Message" required></textarea>
+              <button type="submit" class="btn btn-primary">Envoyer</button>
+            </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© Créé par Timéo</footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
